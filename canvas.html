@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		canvas{
+			border: red solid 1px;
+			margin: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<canvas id="the-canvas" height="1000px" width="1000px"><!-- Our drawing will go here!! --></canvas>
+
+
+
+
+<script type="text/javascript">
+	
+	var canvas = document.getElementById('the-canvas');
+	var context = canvas.getContext('2d');
+
+
+	// context.strokeStyle = "#00ff00";
+	// context.beginPath();
+	// context.moveTo(100,100);
+	// context.lineTo(200,200);
+	// context.lineTo(300,100);
+	// context.lineTo(100,200);
+	// context.lineTo(300,150);
+	// context.lineTo(100,100);
+	// context.stroke();
+
+	// context.strokeStyle = "#00ff00";
+	// 	context.beginPath();
+	// 	context.moveTo(50,50);
+	// 	context.lineTo(100,100);
+	// 	context.stroke();
+
+	// 	context.fillStyle = "#0000ff";
+	// 	context.beginPath();
+	// 	context.arc(175, 175, 50, 0*Math.PI, 1.5*Math.PI);
+	// 	context.fill();
+
+	// 	context.beginPath()
+	// 	context.rect(300,20,100,200);
+	// 	context.stroke();
+
+	var x = 0;
+	var y = 0;
+	var radius = 1;
+
+function draw(){
+		context.clearRect(0,0,500,500);
+		context.beginPath();
+		context.arc(x,y, radius, 0, 2*Math.PI);
+		context.fill();
+		x += 1;
+		y += 1;
+		radius += .1
+	}
+
+	setInterval(draw, 15);
+
+</script>
+
+</body>
+</html>
