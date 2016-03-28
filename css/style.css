@@ -15,3 +15,11 @@
 	height: 15px;
 	text-align: center;
 }
+
+#weather-icon{
+	text-align: center;
+}
+#weather-image{
+	height: 200px;
+	width: 200px;
+}
